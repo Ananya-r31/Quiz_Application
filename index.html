@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-left">
+            <h1>Quiz Master</h1>
+            <p>Interactive Quiz and Score Tracking System</p>
+        </div>
+
+        <div class="student-info">
+            <p><strong>Student Name:</strong> Ananya Ramesh</p>
+            <p><strong>Student ID:</strong> 123</p>
+        </div>
+
+    </header>
+
+    <main class="main-container">
+
+        <section id="home-screen" class="screen active-screen">
+
+           <div class="welcome-section">
+
+        <div>
+            <h2>Welcome to the Quiz Application!</h2>
+            <p>Test your knowledge with our interactive quiz!</p>
+        </div>
+
+
+            <!-- Difficulty Buttons -->
+
+            <div class="difficulty-section">
+
+                <h3>Select Difficulty</h3>
+
+                <div class="difficulty-buttons">
+
+                    <button
+                        class="btn easy"
+                        data-difficulty="Easy">
+                        Easy
+                    </button>
+
+                    <button
+                        class="btn medium"
+                        data-difficulty="Medium">
+                        Medium
+                    </button>
+
+                    <button
+                        class="btn hard"
+                        data-difficulty="Hard">
+                        Hard
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Statistics -->
+
+            <div class="stats-box">
+
+                <h3>Your Statistics</h3>
+
+                <div class="stats-grid">
+
+                    <div class="stat">
+                        <span class="stat-title">Attempts</span>
+                        <span id="stat-attempts" class="stat-number">0</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">Best Score</span>
+                        <span id="stat-best" class="stat-number">0</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-title">Average Score</span>
+                        <span id="stat-average" class="stat-number">0</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stats-buttons">
+
+                    <button
+                        id="view-history-btn"
+                        class="btn secondary">
+                        View History
+                    </button>
+
+                    <button
+                        id="clear-history-btn"
+                        class="btn danger">
+                        Clear History
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ SCREEN -->
+
+        <section id="quiz-screen" class="screen">
+
+            <div class="quiz-top">
+
+                <span id="question-counter">
+                    Question 1
+                </span>
+
+                <span id="live-score">
+                    Score: 0
+                </span>
+
+            </div>
+
+
+            <!-- Progress Bar -->
+
+            <div class="progress-background">
+
+                <div
+                    id="progress-bar"
+                    class="progress-bar">
+                </div>
+
+            </div>
+
+
+            <!-- Timer -->
+
+            <div class="timer">
+
+                Time Remaining:
+                <span id="timer">30</span> seconds
+
+            </div>
+
+
+            <!-- Question -->
+
+            <h2 id="question-text">
+                Question will appear here
+            </h2>
+
+
+            <!-- Options -->
+
+            <div
+                id="options-container"
+                class="options-container">
+            </div>
+
+
+            <!-- Next Button -->
+
+            <button
+                id="next-btn"
+                class="btn primary"
+                disabled>
+                Next Question
+            </button>
+
+        </section>
+
+
+        <!-- RESULTS SCREEN -->
+
+        <section id="results-screen" class="screen">
+
+            <div class="results">
+
+                <h2>Quiz Completed</h2>
+
+                <div class="grade">
+
+                    <span id="grade-letter">
+                        A
+                    </span>
+
+                </div>
+
+                <p>
+                    <strong>Total Score:</strong>
+                    <span id="final-score">0</span>
+                </p>
+
+                <p>
+                    <strong>Percentage:</strong>
+                    <span id="final-percentage">0</span>%
+                </p>
+
+                <p>
+                    <strong>Correct Answers:</strong>
+                    <span id="final-correct">0</span>
+                    /
+                    <span id="final-total">0</span>
+                </p>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button
+                    id="review-btn"
+                    class="btn secondary">
+                    Review Answers
+                </button>
+
+                <button
+                    id="play-again-btn"
+                    class="btn primary">
+                    Back to Home
+                </button>
+
+            </div>
+
+
+            <!-- Review Answers -->
+
+            <div
+                id="review-container"
+                class="review-container hidden">
+            </div>
+
+        </section>
+
+
+        <!-- HISTORY SCREEN -->
+
+        <section id="history-screen" class="screen">
+
+            <h2>Quiz History</h2>
+
+            <div
+                id="history-container"
+                class="history-container">
+            </div>
+
+            <button
+                id="back-home-btn"
+                class="btn primary">
+                Back to Home
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Quiz Application | Developed by Ananya Ramesh
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
