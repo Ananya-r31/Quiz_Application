@@ -19,11 +19,11 @@ An interactive quiz application built using HTML, CSS, and JavaScript. The appli
 
 ## Difficulty Levels
 
-| Level | Number of Questions |
-|-------|---------------------|
-| Easy | 7 |
-| Medium | 7 |
-| Hard | 6 |
+| Level | 
+|-------|
+| Easy | 
+| Medium | 
+| Hard |
 
 ## Technologies Used
 
